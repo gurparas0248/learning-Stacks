@@ -45,8 +45,12 @@ public class Pushatbottom {
         }
     }
     public static void main(String[] args) {
-        String str="abc";
-        String result=reverseString(str);
-        System.out.println(result);
+        Stack<Integer> s=new Stack<>();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+
+        reverseStack(s);
+        printStack(s);
     }
 }

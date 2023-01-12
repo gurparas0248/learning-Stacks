@@ -13,6 +13,7 @@ public class Pushatbottom {
         s.push(top);
     }
 
+    // reverse a String
     public static String reverseString(String str){
         Stack<Character> s=new Stack<>();
         int idx=0;
@@ -26,6 +27,16 @@ public class Pushatbottom {
             result.append(curr);
         }
         return result.toString();
+    }
+
+    //reverse a Stack
+    public static void reverseStack(Stack<Integer> s){
+        if(s.isEmpty()){
+            return;
+        }
+        int top=s.pop();
+        reverseStack(s);
+        pushAtBottom(s,top);
     }
     public static void main(String[] args) {
         String str="abc";
